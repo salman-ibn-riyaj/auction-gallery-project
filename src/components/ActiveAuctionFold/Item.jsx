@@ -11,7 +11,7 @@ const Item = ({item, hanldeGetFavouriteItems}) => {
             <h3>{item.name}</h3>
             </td> 
 
-           <td className='px-2 py-2 bg-cyan-50 text-center'>{item.currentBid}</td> 
+           <td className='px-2 py-2 bg-cyan-50 text-center'>${item.currentBid}</td> 
 
            <td className='px-2 py-2 bg-green-100 text-center'>{item.timeLeft}</td> 
            

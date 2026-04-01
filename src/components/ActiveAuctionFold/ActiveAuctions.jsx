@@ -41,7 +41,7 @@ const ActiveAuctions = ({ auctionDataPromise, setTotal }) => {
 
   return (
     <div className="bg-slate-200 pb-12">
-      <div className="py-4">
+      <div className="py-4 w-11/12 mx-auto">
         <h2 className="text-[#0E2954]">Avtive Auctions</h2>
 
         <p className="text-gray-500 mt-3">
@@ -51,7 +51,7 @@ const ActiveAuctions = ({ auctionDataPromise, setTotal }) => {
 
       {/* table and fovourite items section  */}
 
-      <div className="flex gap-3">
+      <div className="flex flex-col md:flex-row md:justify-between">
         <div className="bg-slate-200 px-10 rounded-xl py-2">
           <table className="w-full">
             <thead className="">
@@ -74,7 +74,7 @@ const ActiveAuctions = ({ auctionDataPromise, setTotal }) => {
           </table>
         </div>
 
-        <div className="bg-indigo-400 rounded-md h-[40%] px-3">
+        <div className="bg-indigo-400 rounded-md space-y-1 py-1 overflow-y-auto px-3 md:h-[50%] md:w-[50%]">
           <div className="border-b-2 px-10 flex flex-col items-center justify-center py-2">
             <h2 className="text-white font-bold text-center flex items-center gap-2">
               {" "}
@@ -106,7 +106,7 @@ const ActiveAuctions = ({ auctionDataPromise, setTotal }) => {
 
           <div className="flex items-center justify-between border-t">
             <h2 className="font-semibold text-xl">Total Bids Amount:</h2>
-            <span className="font-semibold">{totalAmount}</span>
+            <span className="font-semibold">${totalAmount}</span>
           </div>
         </div>
       </div>
