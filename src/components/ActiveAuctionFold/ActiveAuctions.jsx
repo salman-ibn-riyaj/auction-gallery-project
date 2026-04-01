@@ -2,8 +2,9 @@ import React, { use, useState } from "react";
 import Item from "./Item";
 import { Heart } from "lucide-react";
 import FavouriteItems from "./FavouriteItems";
+import { toast } from "react-toastify";
 
-const ActiveAuctions = ({ auctionDataPromise }) => {
+const ActiveAuctions = ({ auctionDataPromise, setTotal }) => {
   const items = use(auctionDataPromise);
   console.log(items);
 
@@ -13,10 +14,14 @@ const ActiveAuctions = ({ auctionDataPromise }) => {
       (finditem) => item.name === finditem.name,
     );
     if (findedArray) {
-      alert(`${item.name} already in favourites`);
+      toast.error(`${item.name} already in favourites`);
       return;
     }
-    setGetFavouriteItems([...getFavouriteItems, item]);
+    const updatedItems = [...getFavouriteItems, item]
+    setTotal(updatedItems);
+    setGetFavouriteItems(updatedItems);
+    toast.success(`${item.name} added to Favourites`)
+    
   };
 
   const handleDelete = (favouriteItem) => {
@@ -24,6 +29,7 @@ const ActiveAuctions = ({ auctionDataPromise }) => {
       (item) => item.name !== favouriteItem.name,
     );
     setGetFavouriteItems(filteredArray);
+    toast.warning(`${favouriteItem.name} deleted`)
   };
   console.log(getFavouriteItems);
 

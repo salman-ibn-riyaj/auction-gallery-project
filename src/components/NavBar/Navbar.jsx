@@ -3,7 +3,7 @@ import Links from "./Links";
 import navImg from '../../assets/Group 3466088.png'
 import { Bell, Menu, X } from "lucide-react";
 
-const Navbar = ({ navDataPromise}) => {
+const Navbar = ({ navDataPromise, total}) => {
   console.log(navDataPromise);
   const navItems = use(navDataPromise);
   console.log(navItems);
@@ -36,7 +36,7 @@ const Navbar = ({ navDataPromise}) => {
 
       <div className="flex items-center gap-5">
         <div className="indicator">
-          <span className="indicator-item badge rounded-full bg-cyan-500">12</span>
+          <span className="indicator-item badge rounded-full bg-cyan-500">{total.length}</span>
           <button className="p-1 bg-slate-200 rounded-full"><Bell /></button>
         </div>
 
