@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "Home",
+    "url": "/"
+  },
+  {
+    "id": 2,
+    "name": "Auctions",
+    "url": "/auctions"
+  },
+  {
+    "id": 3,
+    "name": "Categories",
+    "url": "/categories"
+  },
+  {
+    "id": 4,
+    "name": "How It Works",
+    "url": "/how-it-works"
+  }
+]
