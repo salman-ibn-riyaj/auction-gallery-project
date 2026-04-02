@@ -42,7 +42,7 @@ const ActiveAuctions = ({ auctionDataPromise, setTotal }) => {
   return (
     <div className="bg-slate-200 pb-12">
       <div className="py-4 w-11/12 mx-auto">
-        <h2 className="text-[#0E2954]">Avtive Auctions</h2>
+        <h2 className="text-[#0E2954]">Active Auctions</h2>
 
         <p className="text-gray-500 mt-3">
           Discover and bid on extraordinary items
